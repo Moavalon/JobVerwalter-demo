@@ -1,0 +1,79 @@
+﻿JobVerwalter Demo 0.5.0-preview.3
+Deine Bewerbungen. Dein Überblick.
+
+INSTALLATION UND ERSTSTART
+
+1. JobVerwalter-Demo-0.5.0-preview.3-Setup.exe herunterladen und doppelklicken.
+   Die Installation erfolgt für den aktuellen Benutzer ohne angeforderte
+   Administratorrechte. Zielsystem: Windows 10 22H2 oder Windows 11, jeweils x64.
+2. JobVerwalter über das Startmenü öffnen. Im Browser die Demo-Hinweise lesen
+   und zustimmen, anschließend ein eigenes lokales Konto anlegen. Ein manuelles
+   Bootstrap-Token ist nicht erforderlich.
+3. Eigene Bewerbungen anlegen. Der violette Header zeigt verbleibende Plätze.
+   Zehn Bewerbungen insgesamt, einschließlich Archiv und Soft-Delete; Löschen
+   gibt keinen Platz frei. Bestehende Bewerbungen bleiben an der Grenze nutzbar.
+4. Zum vollständigen Beenden den Startmenü-Eintrag „JobVerwalter beenden“ nutzen.
+   Das Schließen des Browsers allein beendet die Hintergrunddienste nicht.
+
+LIEFERUMFANG UND EIGENE KONFIGURATION
+
+Alle benötigten Laufzeitkomponenten sind enthalten; keine gesonderte Installation
+von .NET, Node.js, PostgreSQL, Docker oder Tailscale notwendig.
+Neue Benutzer erhalten einen leeren Bestand und richten ihr Konto selbst ein.
+Der getrennte Übungsbestand im Startmenü enthält fiktive Daten zum Ansehen.
+Keine Anmeldung bei einem zentralen Betreiberkonto erforderlich.
+
+SMTP und IMAP sind anfangs unkonfiguriert und deaktiviert. Nach bewusster
+Einrichtung und Aktivierung eigener SMTP-Zugangsdaten werden echte E-Mails
+versendet. Für Tests nur an selbst kontrollierte Empfänger senden.
+Der eigene Bestand verwendet keinen Simulationsversand.
+Bei ausgeschaltetem Rechner laufen keine Versanddienste. Bereits freigegebene
+Aufträge können nach dem nächsten Start weiterverarbeitet werden.
+
+DATEN, UPDATE UND DEINSTALLATION
+
+Programmdateien: %LOCALAPPDATA%\Programs\JobVerwalter
+Eigene Daten, Schlüssel und Sicherungen: %LOCALAPPDATA%\JobVerwalter
+
+Normale Deinstallation entfernt die Programmdateien und erhält eigene Daten,
+Sicherungen, Konto und verbrauchtes Kontingent. Neuinstallation setzt das
+vorhandene Kontingent nicht zurück. Vollständiges manuelles Löschen sämtlicher
+Anwendungsdaten wird in dieser frühen Demo nicht zuverlässig als erneute
+Installation desselben Rechners erkannt.
+
+Spätere Updates: neuen Setup-Installer ausführen, keine einzelnen internen
+EXE-Dateien ersetzen. Wichtige Unterlagen zusätzlich außerhalb der Demo bewahren.
+Ein binärer Downgrade allein ersetzt keine Wiederherstellung einer Datenbank.
+
+PRÜFSTAND UND BEKANNTE GRENZEN
+
+Frühe Demo: erfolgreich auf Windows 10 Pro 22H2 mit eingeschränktem Benutzertoken
+geprüft: Installation, Erststart, Konto, Zehnerlimit einschließlich Soft-Delete,
+Bearbeiten und PDF/CSV am Limit, geordneter Stopp und Deinstallation/Neuinstallation
+mit erhaltenem Konto/Kontingent. Manueller Installationstest ergänzt diesen Lauf.
+Die Test-VM enthält Entwicklerwerkzeuge. Frische Windows-10-/Windows-11-Systeme,
+verwaltete Firmenrechner, native Backup/Restore-/Versionsupdate-Abnahme, echter
+SMTP-Test mit separaten Testzugängen und vollständige Ansichts-/Tastatur-/
+Kernablauf-Abnahme stehen noch aus.
+
+Die EXE ist nicht mit einem Herausgeberzertifikat signiert. Windows oder Browser
+können deshalb Warnungen anzeigen. Firmenrichtlinien können die Ausführung
+unterbinden; sie werden von der Demo nicht umgangen.
+
+Die Anwendung läuft lokal über eine Loopback-Adresse. Keine automatische
+Übertragung von Bewerbungsinhalten oder Fehlerberichten an den Entwickler.
+Bewusst eingerichtete Providerverbindungen und externe Links sind davon getrennt.
+
+DATEIPRÜFUNG UND RÜCKMELDUNGEN
+
+Setup-Dateigröße: 324.994.746 Bytes
+SHA-256: 1df1f9cd35effe33c7d88732914345612f77f86a8cfed90c2abae512e789b6df
+Die Prüfsumme bestätigt die Dateiübereinstimmung, keine Herausgebersignatur.
+
+Downloads: https://github.com/Moavalon/JobVerwalter-demo/releases
+Rückmeldungen: https://github.com/Moavalon/JobVerwalter-demo/issues
+GitHub-Issues sind öffentlich. Keine privaten Unterlagen, Zugangsdaten,
+Original-E-Mails oder ungeschwärzten Screenshots veröffentlichen.
+
+Lizenztexte: im Installationsordner unter runtime\LICENSE.txt und
+runtime\ThirdPartyNotices. Maßgeblich sind die jeweils mitgelieferten Texte.
